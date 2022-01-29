@@ -32,6 +32,10 @@ a:hover {
 
 
 
+.p-style-1 {
+	margin: 100px auto 100px auto;
+	text-align:justify;
+}
 
 .container-fluid {
 	padding: 3% 15%;
@@ -71,17 +75,24 @@ a:hover {
 	margin: 5px auto;
 	text-align: center;
 }
+
+.text-align-center{
+	text-align: center;
+}
 .intro-container {
 	/* background-color: #0B525B; */
-	text-align: center;
+	
 	margin: 2rem auto 2rem auto;
 }
 #img-div {
-	margin: 3rem auto auto auto;
+	text-align: center;
+	margin: 3rem auto 3rem auto;
 }
 /* About me */
+
+
 .middle-h2 {
-	text-align: center;
+
 	margin: 5px auto 5px auto;
 }
 
@@ -91,18 +102,13 @@ a:hover {
 	margin-right: 20px;
 }
 
-.about-row {
-	margin: 100px auto 100px auto;
-
-	text-align: left;
-}
 
 /* Skills */
 
 .skill-row {
 	margin: 100px auto 100px auto;
 
-	text-align: left;
+	text-align:justify;
 }
 
 .tech-img {
@@ -207,19 +213,22 @@ border-radius: 30px;
 	}
 	p {
 		font-size: 1.25rem;
+		width: 50vh;
+		width: 50%;
 	} /*1rem = 16px*/
-	.skill-row {
-		width: 50%;
-	}
-	.about-row {
-		width: 50%;
+	.p-style-1{
+		width: 75%;
 	}
 }
 
-@media (min-width: 3440px) {
+@media (min-width: 1720px) {
 	#name{
 		
 		height: 100vh;
+		height: 100%;
+	}
+	.p-style-1{
+		width: 50%;
 	}
 	
 }
