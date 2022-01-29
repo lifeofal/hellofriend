@@ -124,6 +124,7 @@ h3 {
 /* Pricing */
 
 #pricing {
+	height: 100vh;
 	padding: 100px;
 	text-align: center;
 }
@@ -133,6 +134,9 @@ h3 {
 
 .card {
 	height: 100%;
+}
+.card-group{
+	padding-top: 5%;
 }
 
 /* CTA */
