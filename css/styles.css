@@ -5,11 +5,14 @@ body {
 h1 {
 	margin-top: 0;
 }
-h2, h3, a, .navbar{
+h2,
+h3,
+a,
+.navbar {
 	font-family: "Roboto", sans-serif;
 }
 hr {
-	background-color:unset;
+	background-color: unset;
 	width: 15%;
 	border: 1rem dotted black;
 	border-bottom: none;
@@ -29,27 +32,25 @@ a:hover {
 	color: #9bf0e4;
 }
 
-
-
-
 .p-style-1 {
 	margin: 100px auto 100px auto;
-	text-align:justify;
+	text-align: justify;
 }
 
 .container-fluid {
 	padding: 3% 15%;
 }
 
-.dropdown-menu{
+.dropdown-menu {
 	border: None;
 }
 
-#dropdown10{
+#dropdown10 {
 	margin-bottom: 0rem;
 }
 /* Name */
 #MyName {
+	
 	letter-spacing: 0.75rem;
 	font-family: "Poppins", sans-serif;
 	text-align: center;
@@ -57,6 +58,8 @@ a:hover {
 }
 
 #iam {
+
+	width: 50%;
 	letter-spacing: 1rem;
 	text-align: center;
 	font-weight: 350;
@@ -65,7 +68,7 @@ a:hover {
 	position: relative;
 	padding-top: 8rem;
 	padding-bottom: 8rem;
-
+	
 	/* background-color: #1B3A4B; */
 }
 
@@ -76,12 +79,12 @@ a:hover {
 	text-align: center;
 }
 
-.text-align-center{
+.text-align-center {
 	text-align: center;
 }
 .intro-container {
 	/* background-color: #0B525B; */
-	
+
 	margin: 2rem auto 2rem auto;
 }
 #img-div {
@@ -90,9 +93,7 @@ a:hover {
 }
 /* About me */
 
-
 .middle-h2 {
-
 	margin: 5px auto 5px auto;
 }
 
@@ -102,13 +103,12 @@ a:hover {
 	margin-right: 20px;
 }
 
-
 /* Skills */
 
 .skill-row {
 	margin: 100px auto 100px auto;
 
-	text-align:justify;
+	text-align: justify;
 }
 
 .tech-img {
@@ -117,19 +117,17 @@ a:hover {
 	margin: auto auto 20px 20px;
 }
 
-
-
 #contact-message {
 	text-align: center;
 	width: 40%;
 	margin: 20px auto 60px;
 }
-.contact-me{
+.contact-me {
 	text-align: center;
 }
 .btn {
-	background:    #000000;
-border-radius: 30px;
+	background: #000000;
+	border-radius: 30px;
 	font-family: Courier New;
 	color: #ffffff;
 	font-size: 25px;
@@ -150,6 +148,128 @@ border-radius: 30px;
 	color: white;
 	font-size: 0.75rem;
 	padding: 20px 0;
+}
+
+/* Animations */
+
+/* -- Name Reveal -- */
+.firstAnimation {
+	text-align: center;
+}
+
+.animation-one {
+	margin: auto 1rem;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.fName {
+	animation: showup 7s 1 forwards;
+}
+
+.lName {
+	width: 0px;
+	animation: reveal 7s 1 forwards;
+}
+
+.lName h2 {
+	margin-left: -400px;
+	animation: slidein 7s 1 forwards;
+}
+
+@keyframes showup {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slidein {
+	0% {
+		margin-left: -800px;
+	}
+	20% {
+		margin-left: -800px;
+	}
+	35% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: 0px;
+	}
+}
+
+@keyframes reveal {
+	0% {
+		opacity: 0;
+		width: 0px;
+	}
+	20% {
+		opacity: 1;
+		width: 0px;
+	}
+	30% {
+		width: 400px;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		width: 400px;
+	}
+}
+
+/* -- H2 shine -- */
+
+
+
+
+
+
+@keyframes shine1720 {
+
+	0% {
+		background-position: 0;
+	}
+
+	60% {
+		background-position: 31.25rem;
+	}
+
+	100% {
+		background-position: 32rem;
+		
+		
+	}
+	
+}
+
+
+@keyframes shine2293 {
+
+	0% {
+		background-position: 0;
+	}
+
+	60% {
+		background-position: 31.25rem;
+	}
+
+	100% {
+		background-position: 50rem;
+		
+	}
+	
 }
 
 /* Smaller devices (544px and lower) */
@@ -216,19 +336,53 @@ border-radius: 30px;
 		width: 50vh;
 		width: 50%;
 	} /*1rem = 16px*/
-	.p-style-1{
+	.p-style-1 {
 		width: 75%;
 	}
 }
 
 @media (min-width: 1720px) {
-	#name{
-		
+	#name {
 		height: 100vh;
 		height: 100%;
 	}
-	.p-style-1{
+	.p-style-1 {
 		width: 50%;
 	}
-	
+
+	.swe-shine {
+
+
+		position: relative;
+		/* transform: translate(-50%, -50%); */
+		background: linear-gradient(to right, #000000 0, white 10%, #000000  20%);
+		background-position: 0;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: shine1720 0.85s 1 linear;
+		animation-fill-mode: forwards;
+		-webkit-text-size-adjust: none;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+}
+
+
+@media(min-width: 2293px){
+
+	.swe-shine {
+
+		position: relative;
+		/* transform: translate(-50%, -50%); */
+		/* color: #ffffff; */
+		background: linear-gradient(to right, #000000 0, white 10%, #000000  20%);		background-position: 0rem;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: shine2293 0.85s 1 linear;
+		animation-fill-mode: forwards;
+		-webkit-text-size-adjust: none;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
 }
