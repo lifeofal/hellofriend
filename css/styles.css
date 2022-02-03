@@ -5,11 +5,14 @@ body {
 h1 {
 	margin-top: 0;
 }
-h2, h3, a, .navbar{
+h2,
+h3,
+a,
+.navbar {
 	font-family: "Roboto", sans-serif;
 }
 hr {
-	background-color:unset;
+	background-color: unset;
 	width: 15%;
 	border: 1rem dotted black;
 	border-bottom: none;
@@ -29,23 +32,20 @@ a:hover {
 	color: #9bf0e4;
 }
 
-
-
-
 .p-style-1 {
 	margin: 100px auto 100px auto;
-	text-align:justify;
+	text-align: justify;
 }
 
 .container-fluid {
 	padding: 3% 15%;
 }
 
-.dropdown-menu{
+.dropdown-menu {
 	border: None;
 }
 
-#dropdown10{
+#dropdown10 {
 	margin-bottom: 0rem;
 }
 /* Name */
@@ -53,7 +53,7 @@ a:hover {
 	letter-spacing: 0.75rem;
 	font-family: "Poppins", sans-serif;
 	text-align: center;
-	margin: 9.375rem auto 0 auto;
+	margin: 9.375rem 1rem 0 1rem;
 }
 
 #iam {
@@ -76,12 +76,12 @@ a:hover {
 	text-align: center;
 }
 
-.text-align-center{
+.text-align-center {
 	text-align: center;
 }
 .intro-container {
 	/* background-color: #0B525B; */
-	
+
 	margin: 2rem auto 2rem auto;
 }
 #img-div {
@@ -90,9 +90,7 @@ a:hover {
 }
 /* About me */
 
-
 .middle-h2 {
-
 	margin: 5px auto 5px auto;
 }
 
@@ -102,13 +100,12 @@ a:hover {
 	margin-right: 20px;
 }
 
-
 /* Skills */
 
 .skill-row {
 	margin: 100px auto 100px auto;
 
-	text-align:justify;
+	text-align: justify;
 }
 
 .tech-img {
@@ -117,19 +114,17 @@ a:hover {
 	margin: auto auto 20px 20px;
 }
 
-
-
 #contact-message {
 	text-align: center;
 	width: 40%;
 	margin: 20px auto 60px;
 }
-.contact-me{
+.contact-me {
 	text-align: center;
 }
 .btn {
-	background:    #000000;
-border-radius: 30px;
+	background: #000000;
+	border-radius: 30px;
 	font-family: Courier New;
 	color: #ffffff;
 	font-size: 25px;
@@ -152,6 +147,56 @@ border-radius: 30px;
 	padding: 20px 0;
 }
 
+/* Animations */
+
+/* -- Name Reveal -- */
+.firstAnimation{
+	text-align: center;
+}
+
+.animation-one {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.fName {
+	animation: showup 7s 1 forwards;
+
+}
+
+.lName {
+	width: 0px;
+	animation: reveal 7s 1 forwards;
+}
+
+.lName h2 {
+	margin-left: -400px;
+	animation: slidein 7s 1 forwards;
+}
+
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:1;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:400px;}
+    80% {opacity:1;}
+    100% {opacity:1;width:400px;}
+}
 /* Smaller devices (544px and lower) */
 
 @media (max-width: 544px) {
@@ -216,19 +261,17 @@ border-radius: 30px;
 		width: 50vh;
 		width: 50%;
 	} /*1rem = 16px*/
-	.p-style-1{
+	.p-style-1 {
 		width: 75%;
 	}
 }
 
 @media (min-width: 1720px) {
-	#name{
-		
+	#name {
 		height: 100vh;
 		height: 100%;
 	}
-	.p-style-1{
+	.p-style-1 {
 		width: 50%;
 	}
-	
 }
