@@ -50,13 +50,16 @@ a:hover {
 }
 /* Name */
 #MyName {
+	
 	letter-spacing: 0.75rem;
 	font-family: "Poppins", sans-serif;
 	text-align: center;
-	margin: 9.375rem 1rem 0 1rem;
+	margin: 9.375rem auto 0 auto;
 }
 
 #iam {
+
+	width: 50%;
 	letter-spacing: 1rem;
 	text-align: center;
 	font-weight: 350;
@@ -65,7 +68,7 @@ a:hover {
 	position: relative;
 	padding-top: 8rem;
 	padding-bottom: 8rem;
-
+	
 	/* background-color: #1B3A4B; */
 }
 
@@ -150,11 +153,12 @@ a:hover {
 /* Animations */
 
 /* -- Name Reveal -- */
-.firstAnimation{
+.firstAnimation {
 	text-align: center;
 }
 
 .animation-one {
+	margin: auto 1rem;
 	display: inline-block;
 	overflow: hidden;
 	white-space: nowrap;
@@ -162,7 +166,6 @@ a:hover {
 
 .fName {
 	animation: showup 7s 1 forwards;
-
 }
 
 .lName {
@@ -175,28 +178,100 @@ a:hover {
 	animation: slidein 7s 1 forwards;
 }
 
-
 @keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:1;}
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @keyframes slidein {
-    0% { margin-left:-800px; }
-    20% { margin-left:-800px; }
-    35% { margin-left:0px; }
-    100% { margin-left:0px; }
+	0% {
+		margin-left: -800px;
+	}
+	20% {
+		margin-left: -800px;
+	}
+	35% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: 0px;
+	}
 }
 
 @keyframes reveal {
-    0% {opacity:0;width:0px;}
-    20% {opacity:1;width:0px;}
-    30% {width:400px;}
-    80% {opacity:1;}
-    100% {opacity:1;width:400px;}
+	0% {
+		opacity: 0;
+		width: 0px;
+	}
+	20% {
+		opacity: 1;
+		width: 0px;
+	}
+	30% {
+		width: 400px;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		width: 400px;
+	}
 }
+
+/* -- H2 shine -- */
+
+
+
+
+
+
+@keyframes shine1720 {
+
+	0% {
+		background-position: 0;
+	}
+
+	60% {
+		background-position: 31.25rem;
+	}
+
+	100% {
+		background-position: 32rem;
+		
+		
+	}
+	
+}
+
+
+@keyframes shine2293 {
+
+	0% {
+		background-position: 0;
+	}
+
+	60% {
+		background-position: 31.25rem;
+	}
+
+	100% {
+		background-position: 50rem;
+		
+	}
+	
+}
+
 /* Smaller devices (544px and lower) */
 
 @media (max-width: 544px) {
@@ -274,4 +349,40 @@ a:hover {
 	.p-style-1 {
 		width: 50%;
 	}
+
+	.swe-shine {
+
+
+		position: relative;
+		/* transform: translate(-50%, -50%); */
+		background: linear-gradient(to right, #000000 0, white 10%, #000000  20%);
+		background-position: 0;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: shine1720 0.85s 1 linear;
+		animation-fill-mode: forwards;
+		-webkit-text-size-adjust: none;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+}
+
+
+@media(min-width: 2293px){
+
+	.swe-shine {
+
+		position: relative;
+		/* transform: translate(-50%, -50%); */
+		/* color: #ffffff; */
+		background: linear-gradient(to right, #000000 0, white 10%, #000000  20%);		background-position: 0rem;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: shine2293 0.85s 1 linear;
+		animation-fill-mode: forwards;
+		-webkit-text-size-adjust: none;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
 }
