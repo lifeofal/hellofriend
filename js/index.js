@@ -1,5 +1,5 @@
 setTimeout(function(){
-    $("#iam").attr("class", "swe-shine");
+    $("#iam").addClass("swe-shine");
     setTimeout(function(){
         $("#iam").removeClass("swe-shine");
     },1000);
