@@ -27,6 +27,7 @@ body {
 	word-spacing: 10px;
 	letter-spacing: 0px;
 	color: white;
+    z-index: 0;
 }
 
 .hidden {
