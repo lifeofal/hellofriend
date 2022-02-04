@@ -46,6 +46,41 @@ body {
 	margin-left: -275px;
 }
 
+@media (max-width: 600px) {
+    .divider{
+        margin-top: 33%;
+    }
+    .reveal-text {
+        font-size: 3.5rem;
+        font-weight: 600;
+        color: white;
+        font-family: "Manrope", sans-serif;
+        animation: marigo-reveal 2s linear forwards;
+        
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        font-weight: 400;
+        word-spacing: 5px;
+        letter-spacing: 0px;
+        color: white;
+        z-index: 0;
+    }
+
+    .flower-img {
+        filter: brightness(75%);
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 350px;
+        height: 350px;
+        margin-top: -175px; /* Half the height */
+        margin-left: -175px;
+    }
+}
+
 @supports (-webkit-background-clip: text) or (background-clip: text) {
 	.Letter {
 		color: transparent;
@@ -54,7 +89,6 @@ body {
 		background-image: url("../images/reveal_background.jpg");
 		background-repeat: repeat-y;
 		background-position-x: 100%;
-
 		animation: reveal-bg 0.5s linear forwards;
 	}
 	.hide-text {
@@ -66,7 +100,6 @@ body {
 		background-size: 100%;
 		background-repeat: repeat-y;
 		background-position-x: 100%;
-
 		animation: hide-bg 0.75s linear forwards;
 	}
 }
