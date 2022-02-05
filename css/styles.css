@@ -340,6 +340,9 @@ a:hover {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+	.mobile-nav-toggle{
+		display: none;
+	}
 	h1 {
 		font-size: 3.25rem;
 	}
