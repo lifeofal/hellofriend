@@ -50,7 +50,6 @@ a:hover {
 }
 /* Name */
 #MyName {
-	
 	letter-spacing: 0.75rem;
 	font-family: "Poppins", sans-serif;
 	text-align: center;
@@ -58,7 +57,6 @@ a:hover {
 }
 
 #iam {
-
 	width: 50%;
 	letter-spacing: 1rem;
 	text-align: center;
@@ -68,7 +66,7 @@ a:hover {
 	position: relative;
 	padding-top: 8rem;
 	padding-bottom: 8rem;
-	
+
 	/* background-color: #1B3A4B; */
 }
 
@@ -152,32 +150,6 @@ a:hover {
 
 /* Animations */
 
-/* -- Name Reveal -- */
-.firstAnimation {
-	text-align: center;
-}
-
-.animation-one {
-	margin: auto 1rem;
-	display: inline-block;
-	overflow: hidden;
-	white-space: nowrap;
-}
-
-.fName {
-	animation: showup 7s 1 forwards;
-}
-
-.lName {
-	width: 0px;
-	animation: reveal 7s 1 forwards;
-}
-
-.lName h2 {
-	margin-left: -400px;
-	animation: slidein 7s 1 forwards;
-}
-
 @keyframes showup {
 	0% {
 		opacity: 0;
@@ -231,13 +203,21 @@ a:hover {
 
 /* -- H2 shine -- */
 
+@keyframes shine992 {
+	0% {
+		background-position: 0rem;
+	}
 
+	60% {
+		background-position: 21.5rem;
+	}
 
-
-
+	100% {
+		background-position: 21.7em;
+	}
+}
 
 @keyframes shine1720 {
-
 	0% {
 		background-position: 0;
 	}
@@ -248,15 +228,10 @@ a:hover {
 
 	100% {
 		background-position: 32rem;
-		
-		
 	}
-	
 }
 
-
 @keyframes shine2293 {
-
 	0% {
 		background-position: 0;
 	}
@@ -267,9 +242,51 @@ a:hover {
 
 	100% {
 		background-position: 50rem;
-		
 	}
+}
+
+@media(max-width: 991px){
+
+	.navbar-mobile-top{
+		display: none;
+	}
+	.navbar-light .navbar-toggler{
+		border-color: transparent;
+	}
+	.navbar-toggler:focus{
+		box-shadow: 0 0 0 0;
+	}
+	p {
+		font-size: 0.85rem;
+	}
+	h1 {
+		font-size: 1.75rem;
+	}
+
+	.top-container{
+		padding-top: 0rem;
+	}
+	#MyName {
 	
+		margin: 3rem auto 0 auto;
+	}
+
+	#iam {
+		text-align: center;
+		font-size: 0.75rem;
+		margin: 0rem auto 7rem;
+		width: 90%;
+	}
+	.skill-row {
+		width: 90%;
+	}
+	.about-row {
+		width: 90%;
+	}
+	.face {
+		width: 50%;
+		height: auto;
+	}
 }
 
 /* Smaller devices (544px and lower) */
@@ -282,8 +299,10 @@ a:hover {
 		font-size: 1.75rem;
 	}
 	#iam {
+		text-align: center;
 		font-size: 0.75rem;
-		margin: 2rem auto 15rem;
+		margin: 2rem auto 7rem;
+		width: 90%;
 	}
 	.skill-row {
 		width: 90%;
@@ -339,6 +358,45 @@ a:hover {
 	.p-style-1 {
 		width: 75%;
 	}
+	.swe-shine {
+		position: relative;
+		/* transform: translate(-50%, -50%); */
+		background: linear-gradient(to right, #000000 0, white 10%, #000000 20%);
+		background-position: 0;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: shine992 0.75s 1 linear;
+		animation-fill-mode: forwards;
+		-webkit-text-size-adjust: none;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+	/* -- Name Reveal -- */
+	.firstAnimation {
+		text-align: center;
+	}
+
+	.animation-one {
+		margin: auto 1rem;
+		display: inline-block;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	.fName {
+		animation: showup 5s 1 forwards;
+	}
+
+	.lName {
+		width: 0px;
+		animation: reveal 5s 1 forwards;
+	}
+
+	.lName h2 {
+		margin-left: -400px;
+		animation: slidein 5s 1 forwards;
+	}
 }
 
 @media (min-width: 1720px) {
@@ -351,11 +409,9 @@ a:hover {
 	}
 
 	.swe-shine {
-
-
 		position: relative;
 		/* transform: translate(-50%, -50%); */
-		background: linear-gradient(to right, #000000 0, white 10%, #000000  20%);
+		background: linear-gradient(to right, #000000 0, white 10%, #000000 20%);
 		background-position: 0;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -367,15 +423,13 @@ a:hover {
 	}
 }
 
-
-@media(min-width: 2293px){
-
+@media (min-width: 2293px) {
 	.swe-shine {
-
 		position: relative;
 		/* transform: translate(-50%, -50%); */
 		/* color: #ffffff; */
-		background: linear-gradient(to right, #000000 0, white 10%, #000000  20%);		background-position: 0rem;
+		background: linear-gradient(to right, #000000 0, white 10%, #000000 20%);
+		background-position: 0rem;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		animation: shine2293 0.85s 1 linear;
@@ -384,5 +438,4 @@ a:hover {
 		text-decoration: none;
 		white-space: nowrap;
 	}
-
 }
